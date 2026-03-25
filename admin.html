@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeLine Hospital | Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">🏥</div>
+        <div class="logo-text">
+          <h2>LifeLine</h2>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item active" data-tab="dashboard">
+          <span class="icon">📊</span> Dashboard
+        </a>
+        <a href="#appointments" class="nav-item" data-tab="appointments">
+          <span class="icon">📅</span> Appointments
+        </a>
+        <a href="#doctors" class="nav-item" data-tab="doctors">
+          <span class="icon">👨‍⚕️</span> Doctors
+        </a>
+        <a href="#services" class="nav-item" data-tab="services">
+          <span class="icon">🏥</span> Services
+        </a>
+        <a href="#calls" class="nav-item" data-tab="calls">
+          <span class="icon">🤖</span> AI Call Logs
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <a href="/" target="_blank" class="view-site">
+          <span class="icon">🌐</span> View Website
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h1 id="pageTitle">Dashboard</h1>
+        <div class="user-profile">
+          <span class="avatar">A</span>
+          <span class="name">Admin User</span>
+        </div>
+      </header>
+
+      <div class="content-area">
+        
+        <!-- DASHBOARD TAB -->
+        <section id="tab-dashboard" class="tab-pane active">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon blue">📅</div>
+              <div class="stat-info">
+                <h3>Total Appointments</h3>
+                <p id="stat-total-apt">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon green">🕒</div>
+              <div class="stat-info">
+                <h3>Today's Appts</h3>
+                <p id="stat-today-apt">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon yellow">⏳</div>
+              <div class="stat-info">
+                <h3>Pending Appts</h3>
+                <p id="stat-pending-apt">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon purple">🤖</div>
+              <div class="stat-info">
+                <h3>AI Calls Handled</h3>
+                <p id="stat-calls">0</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-widgets">
+            <div class="widget">
+              <div class="widget-header">
+                <h2>Recent Appointments</h2>
+                <button class="btn btn-sm" onclick="switchTab('appointments')">View All</button>
+              </div>
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Patient</th>
+                      <th>Phone</th>
+                      <th>Date & Time</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="recent-appointments-body">
+                    <!-- Loaded via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- APPOINTMENTS TAB -->
+        <section id="tab-appointments" class="tab-pane">
+          <div class="page-actions">
+            <div class="filters">
+              <input type="date" id="filter-date" class="form-control">
+              <select id="filter-status" class="form-control">
+                <option value="">All Statuses</option>
+                <option value="pending">Pending</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+              <button class="btn btn-outline" id="btn-filter-apt">Filter</button>
+              <button class="btn btn-text" id="btn-clear-apt">Clear</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Patient Name</th>
+                    <th>Phone</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="appointments-body">
+                  <!-- Loaded via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- DOCTORS TAB -->
+        <section id="tab-doctors" class="tab-pane">
+          <div class="page-actions">
+            <div class="search-box">
+              <!-- Search coming soon -->
+            </div>
+            <button class="btn btn-primary" onclick="openDoctorModal()">+ Add New Doctor</button>
+          </div>
+          
+          <div class="card">
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Specialty</th>
+                    <th>Experience</th>
+                    <th>Availability</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="doctors-body">
+                  <!-- Loaded via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES TAB -->
+        <section id="tab-services" class="tab-pane">
+          <div class="page-actions">
+            <div class="search-box"></div>
+            <button class="btn btn-primary" onclick="openServiceModal()">+ Add Service</button>
+          </div>
+          
+          <div class="card">
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Icon</th>
+                    <th>Service Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="services-body">
+                  <!-- Loaded via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- CALL LOGS TAB -->
+        <section id="tab-calls" class="tab-pane">
+          <div class="page-actions">
+            <p class="text-muted">History of calls handled by the AI Voice Agent.</p>
+            <button class="btn btn-outline" onclick="loadCallLogs()">↻ Refresh</button>
+          </div>
+          
+          <div class="card">
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Date & Time</th>
+                    <th>Caller Phone</th>
+                    <th>Type</th>
+                    <th>Duration</th>
+                    <th>Action Taken</th>
+                    <th>Summary</th>
+                  </tr>
+                </thead>
+                <tbody id="calls-body">
+                  <!-- Loaded via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- MODALS -->
+  
+  <!-- Doctor Modal -->
+  <div class="modal" id="doctorModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="doctorModalTitle">Add New Doctor</h2>
+        <button class="close-btn" onclick="closeModals()">&times;</button>
+      </div>
+      <form id="doctorForm">
+        <input type="hidden" id="doc_id">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="doc_name" class="form-control" placeholder="Dr. First Last" required>
+        </div>
+        <div class="form-group">
+          <label>Qualification</label>
+          <input type="text" id="doc_qual" class="form-control" placeholder="MBBS, MD" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Specialty</label>
+            <input type="text" id="doc_spec" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Experience (Years)</label>
+            <input type="number" id="doc_exp" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Available Days</label>
+            <input type="text" id="doc_days" class="form-control" placeholder="Mon-Sat" required>
+          </div>
+          <div class="form-group">
+            <label>Available Time</label>
+            <input type="text" id="doc_time" class="form-control" placeholder="10:00 AM - 4:00 PM" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select id="doc_status" class="form-control">
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModals()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Doctor</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Appointment Status Modal -->
+  <div class="modal" id="aptModal">
+    <div class="modal-content modal-sm">
+      <div class="modal-header">
+        <h2>Update Appointment</h2>
+        <button class="close-btn" onclick="closeModals()">&times;</button>
+      </div>
+      <form id="aptForm">
+        <input type="hidden" id="apt_id">
+        <div class="form-group">
+          <label>Status</label>
+          <select id="apt_status" class="form-control">
+            <option value="pending">Pending</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Admin Notes</label>
+          <textarea id="apt_notes" class="form-control" rows="3" placeholder="Optional notes..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeModals()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

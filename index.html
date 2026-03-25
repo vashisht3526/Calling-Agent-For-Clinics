@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeLine Hospital — Advanced Healthcare You Can Trust | Mumbai</title>
+  <meta name="description" content="LifeLine Hospital, Mumbai — Experienced doctors, 20+ specialities, easy appointment booking. Trusted by 10,000+ patients. Book your appointment today.">
+  <meta name="keywords" content="hospital Mumbai, clinic Mumbai, doctor appointment, healthcare, LifeLine Hospital">
+  <meta property="og:title" content="LifeLine Hospital — Advanced Healthcare You Can Trust">
+  <meta property="og:description" content="Experienced doctors, easy appointment booking. Trusted by 10,000+ patients in Mumbai.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    "name": "LifeLine Hospital",
+    "description": "Advanced healthcare you can trust. Multi-speciality hospital in Mumbai.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Andheri West, Near Metro Station",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400058",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-22-12345678",
+    "openingHours": "Mo-Sa 08:00-21:00",
+    "medicalSpecialty": ["Cardiology", "Orthopedics", "Dermatology", "Gynecology", "Pediatrics", "General Medicine"]
+  }
+  </script>
+  <script src="https://unpkg.com/livekit-client/dist/livekit-client.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">🏥</div>
+        Life<span>Line</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#specialities">Specialities</a>
+        <a href="#services">Services</a>
+        <a href="#appointment">Book</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+912212345678" class="emergency-btn">
+          🚨 <span>Emergency</span>
+        </a>
+        <a href="#appointment" class="btn btn-primary btn-sm header-cta">
+          Book Appointment
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero-bg.png" alt="LifeLine Hospital Mumbai" loading="eager">
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Trusted by 10,000+ patients in Mumbai
+      </div>
+      <h1>
+        Advanced <span class="highlight">Healthcare</span><br>
+        You Can Trust
+      </h1>
+      <p class="hero-text">
+        Experienced doctors, modern facilities, and compassionate care — all under one roof.
+        Book appointments easily and get the care you deserve.
+      </p>
+      <div class="hero-buttons">
+        <a href="#appointment" class="btn btn-primary">
+          📅 Book Appointment
+        </a>
+        <a href="tel:+912212345678" class="btn btn-outline">
+          📞 Call Now
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number" data-target="10000">0</span>
+          <span class="stat-label">Patients Treated</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number" data-target="25">0</span>
+          <span class="stat-label">Expert Doctors</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content animate-on-scroll">
+          <span class="section-label">🏥 About Us</span>
+          <h2 class="section-title">Caring for Mumbai Since 2009</h2>
+          <p>
+            LifeLine Hospital has been serving the people of Mumbai for over 15 years.
+            Founded with a mission to provide affordable, quality healthcare, we've grown into
+            a trusted multi-speciality hospital with experienced doctors and modern facilities.
+          </p>
+          <p>
+            Our team of 25+ doctors across 6 specialities is committed to providing
+            compassionate, patient-first care. Whether it's a routine check-up or a complex
+            surgery, we ensure every patient feels safe and cared for.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">✅</div>
+              <div>
+                <h4>NABH Quality Standards</h4>
+                <p>We follow the highest standards of quality and patient safety</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">🕐</div>
+              <div>
+                <h4>24/7 Emergency Services</h4>
+                <p>Round-the-clock emergency care with fully equipped ambulances</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">💳</div>
+              <div>
+                <h4>Cashless Insurance</h4>
+                <p>We accept all major health insurance for hassle-free treatment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="animate-on-scroll delay-2">
+          <div class="stats-bar">
+            <div class="stat-card">
+              <div class="stat-icon">🏆</div>
+              <span class="stat-value" data-target="15">0</span>
+              <span class="stat-desc">Years of Trust</span>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">👨‍⚕️</div>
+              <span class="stat-value" data-target="25">0</span>
+              <span class="stat-desc">Expert Doctors</span>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">😊</div>
+              <span class="stat-value" data-target="10000">0</span>
+              <span class="stat-desc">Happy Patients</span>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🏥</div>
+              <span class="stat-value" data-target="6">0</span>
+              <span class="stat-desc">Specialities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DOCTORS ====== -->
+  <section class="section doctors" id="doctors">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">👨‍⚕️ Our Doctors</span>
+        <h2 class="section-title">Meet Our Expert Doctors</h2>
+        <p class="section-subtitle">
+          Our experienced doctors are here to provide the best care for you and your family.
+        </p>
+      </div>
+    </div>
+    <div class="doctors-scroll" id="doctorsScroll">
+
+      <!-- Doctor 1 -->
+      <div class="doctor-card animate-scale">
+        <div class="doctor-photo">
+          <img src="images/doctor-1.png" alt="Dr. Rajesh Sharma" loading="lazy">
+          <span class="availability-badge">Available Today</span>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Rajesh Sharma</h3>
+          <p class="doctor-qualification">MBBS, MD (Cardiology), FACC</p>
+          <span class="doctor-specialty">❤️ Cardiologist</span>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <span class="meta-icon">📅</span>
+              <span>18 years experience</span>
+            </div>
+            <div class="doctor-meta-item">
+              <span class="meta-icon">🕐</span>
+              <span>Mon–Sat, 10:00 AM – 4:00 PM</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-card animate-scale">
+        <div class="doctor-photo">
+          <img src="images/doctor-2.png" alt="Dr. Priya Deshmukh" loading="lazy">
+          <span class="availability-badge">Available Today</span>
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Priya Deshmukh</h3>
+          <p class="doctor-qualification">MBBS, MS (Gynaecology)</p>
+          <span class="doctor-specialty">👶 Gynaecologist</span>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <span class="meta-icon">📅</span>
+              <span>12 years experience</span>
+            </div>
+            <div class="doctor-meta-item">
+              <span class="meta-icon">🕐</span>
+              <span>Mon–Fri, 11:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </div>
+
+      <!-- Doctor 3 -->
+      <div class="doctor-card animate-scale">
+        <div class="doctor-photo" style="display:flex;align-items:center;justify-content:center;font-size:80px;">
+          👨‍⚕️
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Anil Patil</h3>
+          <p class="doctor-qualification">MBBS, MS (Orthopaedics)</p>
+          <span class="doctor-specialty">🦴 Orthopaedic Surgeon</span>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <span class="meta-icon">📅</span>
+              <span>20 years experience</span>
+            </div>
+            <div class="doctor-meta-item">
+              <span class="meta-icon">🕐</span>
+              <span>Mon–Sat, 9:00 AM – 2:00 PM</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </div>
+
+      <!-- Doctor 4 -->
+      <div class="doctor-card animate-scale">
+        <div class="doctor-photo" style="display:flex;align-items:center;justify-content:center;font-size:80px;">
+          👩‍⚕️
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Sneha Kulkarni</h3>
+          <p class="doctor-qualification">MBBS, MD (Dermatology)</p>
+          <span class="doctor-specialty">🧴 Dermatologist</span>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <span class="meta-icon">📅</span>
+              <span>8 years experience</span>
+            </div>
+            <div class="doctor-meta-item">
+              <span class="meta-icon">🕐</span>
+              <span>Tue–Sat, 12:00 PM – 6:00 PM</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </div>
+
+      <!-- Doctor 5 -->
+      <div class="doctor-card animate-scale">
+        <div class="doctor-photo" style="display:flex;align-items:center;justify-content:center;font-size:80px;">
+          👨‍⚕️
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Vikram Joshi</h3>
+          <p class="doctor-qualification">MBBS, MD (Paediatrics)</p>
+          <span class="doctor-specialty">🧒 Paediatrician</span>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <span class="meta-icon">📅</span>
+              <span>14 years experience</span>
+            </div>
+            <div class="doctor-meta-item">
+              <span class="meta-icon">🕐</span>
+              <span>Mon–Fri, 10:00 AM – 3:00 PM</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </div>
+
+      <!-- Doctor 6 -->
+      <div class="doctor-card animate-scale">
+        <div class="doctor-photo" style="display:flex;align-items:center;justify-content:center;font-size:80px;">
+          👨‍⚕️
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Suresh Mehta</h3>
+          <p class="doctor-qualification">MBBS, MD (General Medicine)</p>
+          <span class="doctor-specialty">🩺 General Physician</span>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item">
+              <span class="meta-icon">📅</span>
+              <span>22 years experience</span>
+            </div>
+            <div class="doctor-meta-item">
+              <span class="meta-icon">🕐</span>
+              <span>Mon–Sat, 8:00 AM – 1:00 PM</span>
+            </div>
+          </div>
+          <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== SPECIALITIES ====== -->
+  <section class="section specialities" id="specialities">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">🔬 Specialities</span>
+        <h2 class="section-title">Our Medical Specialities</h2>
+        <p class="section-subtitle">
+          We offer comprehensive care across multiple specialities with experienced specialists.
+        </p>
+      </div>
+      <div class="specialities-grid">
+        <div class="specialty-card animate-on-scroll">
+          <div class="specialty-icon"><span>🫀</span></div>
+          <h3>Cardiology</h3>
+          <p>Heart care, ECG, echo, angiography, and cardiac surgeries</p>
+        </div>
+        <div class="specialty-card animate-on-scroll delay-1">
+          <div class="specialty-icon"><span>🦴</span></div>
+          <h3>Orthopedics</h3>
+          <p>Bone & joint care, fractures, joint replacement, sports injuries</p>
+        </div>
+        <div class="specialty-card animate-on-scroll delay-2">
+          <div class="specialty-icon"><span>🧴</span></div>
+          <h3>Dermatology</h3>
+          <p>Skin care, acne, eczema, hair loss, cosmetic treatments</p>
+        </div>
+        <div class="specialty-card animate-on-scroll delay-3">
+          <div class="specialty-icon"><span>👶</span></div>
+          <h3>Gynecology</h3>
+          <p>Women's health, pregnancy care, laparoscopy, fertility</p>
+        </div>
+        <div class="specialty-card animate-on-scroll delay-4">
+          <div class="specialty-icon"><span>🩺</span></div>
+          <h3>General Medicine</h3>
+          <p>Diabetes, hypertension, infections, preventive health check-ups</p>
+        </div>
+        <div class="specialty-card animate-on-scroll delay-5">
+          <div class="specialty-icon"><span>🧒</span></div>
+          <h3>Pediatrics</h3>
+          <p>Child healthcare, vaccinations, growth monitoring, newborn care</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES / FACILITIES ====== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">🏗️ Facilities</span>
+        <h2 class="section-title">Our Facilities & Services</h2>
+        <p class="section-subtitle">
+          Modern medical infrastructure for comprehensive healthcare under one roof.
+        </p>
+      </div>
+    </div>
+    <div class="services-scroll">
+      <div class="service-card">
+        <div class="service-icon"><span>🏨</span></div>
+        <h3>ICU</h3>
+        <p>24/7 intensive care with advanced monitoring</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span>🛏️</span></div>
+        <h3>General Ward</h3>
+        <p>Comfortable rooms with round-the-clock nursing</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span>🔬</span></div>
+        <h3>Operation Theatre</h3>
+        <p>State-of-the-art modular OTs for surgeries</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span>📷</span></div>
+        <h3>X-Ray & Imaging</h3>
+        <p>Digital X-ray, ultrasound, and CT scan</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span>🧪</span></div>
+        <h3>Pathology Lab</h3>
+        <p>In-house lab for blood tests and diagnostics</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span>💊</span></div>
+        <h3>Pharmacy</h3>
+        <p>24-hour pharmacy with all medicines available</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><span>🚑</span></div>
+        <h3>Ambulance</h3>
+        <p>GPS-equipped ambulances for quick response</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== APPOINTMENT BOOKING ====== -->
+  <section class="section appointment" id="appointment">
+    <div class="container">
+      <div class="appointment-wrapper animate-on-scroll">
+        <div class="appointment-content">
+          <span class="section-label">📅 Book Now</span>
+          <h2 class="section-title">Book Your Appointment</h2>
+          <p class="section-subtitle">
+            Choose your doctor, pick a time, and we'll confirm your appointment instantly.
+          </p>
+
+          <form class="appointment-form" id="appointmentForm">
+            <div class="form-group">
+              <label for="patientName">Patient Name</label>
+              <input type="text" id="patientName" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="patientPhone">Phone Number</label>
+              <input type="tel" id="patientPhone" name="phone" placeholder="+91 98765 43210" required pattern="[0-9]{10}">
+            </div>
+            <div class="form-group">
+              <label for="selectDoctor">Select Doctor</label>
+              <select id="selectDoctor" name="doctor" required>
+                <option value="">Choose a doctor</option>
+                <option value="dr-rajesh-sharma">Dr. Rajesh Sharma — Cardiologist</option>
+                <option value="dr-priya-deshmukh">Dr. Priya Deshmukh — Gynaecologist</option>
+                <option value="dr-anil-patil">Dr. Anil Patil — Orthopaedic Surgeon</option>
+                <option value="dr-sneha-kulkarni">Dr. Sneha Kulkarni — Dermatologist</option>
+                <option value="dr-vikram-joshi">Dr. Vikram Joshi — Paediatrician</option>
+                <option value="dr-suresh-mehta">Dr. Suresh Mehta — General Physician</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointmentDate">Preferred Date</label>
+                <input type="date" id="appointmentDate" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="appointmentTime">Preferred Time</label>
+                <select id="appointmentTime" name="time" required>
+                  <option value="">Select time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="09:30">9:30 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="12:30">12:30 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="14:30">2:30 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="15:30">3:30 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="16:30">4:30 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-white">
+              ✅ Confirm Appointment
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✅</div>
+            <h3>Appointment Booked!</h3>
+            <p>We'll call you shortly to confirm. You can also reach us via WhatsApp.</p>
+            <a href="https://wa.me/912212345678?text=Hi%2C%20I%20just%20booked%20an%20appointment%20at%20LifeLine%20Hospital" class="btn btn-white" style="margin-top:20px;">
+              💬 Confirm on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== AI VOICE AGENT ====== -->
+  <section class="section ai-voice" id="ai-voice">
+    <div class="container">
+      <div class="ai-voice-wrapper animate-on-scroll">
+        <div class="ai-voice-content">
+          <div class="ai-voice-icon">🤖</div>
+          <span class="section-label">🎙️ Smart Calling</span>
+          <h2 class="section-title">AI-Powered Voice Assistant</h2>
+          <p class="section-subtitle">
+            Never miss a patient call. Our intelligent voice agent handles calls 24/7, provides doctor
+            information, and even books appointments automatically.
+          </p>
+        </div>
+        <div class="ai-features">
+          <div class="ai-feature">
+            <span class="check">✓</span>
+            <span>Answers calls automatically, 24/7</span>
+          </div>
+          <div class="ai-feature">
+            <span class="check">✓</span>
+            <span>Provides doctor availability & clinic info</span>
+          </div>
+          <div class="ai-feature">
+            <span class="check">✓</span>
+            <span>Books appointments over the phone</span>
+          </div>
+          <div class="ai-feature">
+            <span class="check">✓</span>
+            <span>Sends WhatsApp confirmation to patients</span>
+          </div>
+          <div class="ai-feature">
+            <span class="check">✓</span>
+            <span>Logs every call for your review</span>
+          </div>
+          <div class="ai-feature">
+            <span class="check">✓</span>
+            <span>Reduces missed calls by 95%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">💬 Patient Stories</span>
+        <h2 class="section-title">What Our Patients Say</h2>
+        <p class="section-subtitle">
+          Real experiences from patients who trusted us with their health.
+        </p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Dr. Rajesh Sharma treated my father's heart condition with great care. The staff was
+            very supportive and the facilities are excellent. We are truly grateful to LifeLine Hospital."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AP</div>
+            <div class="testimonial-author-info">
+              <h4>Anita Patil</h4>
+              <p>Andheri, Mumbai</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll delay-1">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "I had my delivery at LifeLine Hospital. Dr. Priya Deshmukh and her team made the whole
+            experience comfortable and stress-free. The room was clean and the nurses were wonderful."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MK</div>
+            <div class="testimonial-author-info">
+              <h4>Meera Kulkarni</h4>
+              <p>Bandra, Mumbai</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll delay-2">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Best hospital in the area. I bring my entire family here for regular check-ups. The
+            online booking system saves us so much time. Highly recommended!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RN</div>
+            <div class="testimonial-author-info">
+              <h4>Rahul Nair</h4>
+              <p>Versova, Mumbai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== BLOG ====== -->
+  <section class="section blog" id="blog">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">📰 Health Blog</span>
+        <h2 class="section-title">Health Tips & Articles</h2>
+        <p class="section-subtitle">Stay informed with expert health advice from our doctors.</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-thumb">🫀</div>
+          <div class="blog-body">
+            <span class="blog-category">Heart Health</span>
+            <h3>5 Warning Signs of Heart Problems You Shouldn't Ignore</h3>
+            <p>Learn to recognize early symptoms of heart disease and when to seek medical help.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll delay-1">
+          <div class="blog-thumb">🧘</div>
+          <div class="blog-body">
+            <span class="blog-category">Wellness</span>
+            <h3>Managing Diabetes: Diet, Exercise, and Lifestyle Changes</h3>
+            <p>Practical tips from our doctors to keep your blood sugar levels under control.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll delay-2">
+          <div class="blog-thumb">💉</div>
+          <div class="blog-body">
+            <span class="blog-category">Child Care</span>
+            <h3>Vaccination Schedule for Children: A Complete Guide</h3>
+            <p>Everything parents need to know about timely vaccinations for their children.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">❓ FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Quick answers to common questions about our hospital and services.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            <span>What are the hospital visiting hours?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our OPD hours are Monday to Saturday, 8:00 AM to 9:00 PM. Emergency services are available
+              24/7. Patient visiting hours for admitted patients are 11:00 AM – 1:00 PM and 5:00 PM – 7:00 PM.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll delay-1">
+          <button class="faq-question">
+            <span>Do you accept health insurance?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, we accept cashless insurance from all major providers including Star Health,
+              ICICI Lombard, HDFC Ergo, Bajaj Allianz, and New India Assurance. Please carry your
+              insurance card and ID when visiting.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll delay-2">
+          <button class="faq-question">
+            <span>How do I book an appointment?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You can book an appointment through our website (scroll up to the booking section),
+              call us at +91-22-12345678, or send us a WhatsApp message. You can also walk in to
+              the hospital during OPD hours.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll delay-3">
+          <button class="faq-question">
+            <span>Is parking available at the hospital?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, we have a dedicated parking area for patients and visitors. Parking is free for
+              the first 2 hours. Valet parking is also available at the main entrance.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll delay-4">
+          <button class="faq-question">
+            <span>What should I bring for my appointment?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Please bring a valid photo ID (Aadhaar, PAN, or passport), your health insurance card
+              (if applicable), any previous medical reports or prescriptions, and a list of current
+              medications you are taking.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">📍 Contact</span>
+        <h2 class="section-title">Visit Us or Get in Touch</h2>
+        <p class="section-subtitle">We're conveniently located in Andheri West, Mumbai.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card animate-on-scroll">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>LifeLine Hospital, Plot No. 42, Near Andheri Metro Station,<br>Andheri West, Mumbai — 400058</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91-22-1234-5678 (Appointments)<br>+91-22-1234-9999 (Emergency)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div>
+              <h4>Timings</h4>
+              <p>OPD: Mon–Sat, 8:00 AM – 9:00 PM<br>Emergency: 24/7</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>info@lifelinehospital.in</p>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <a href="tel:+912212345678" class="btn btn-primary btn-sm">📞 Call Now</a>
+            <a href="https://wa.me/912212345678" class="btn btn-outline btn-sm" style="border-color: #25D366; color: #25D366;">💬 WhatsApp</a>
+          </div>
+        </div>
+        <div class="map-container animate-on-scroll delay-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.877!2d72.836!3d19.136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA4JzA5LjYiTiA3MsKwNTAnMDkuNiJF!5e0!3m2!1sen!2sin!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="LifeLine Hospital Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">🏥</div>
+            Life<span>Line</span>
+          </a>
+          <p>
+            LifeLine Hospital has been providing trusted healthcare to Mumbai since 2009.
+            Our mission is to make quality healthcare accessible, affordable, and compassionate.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About Us</a>
+          <a href="#doctors">Our Doctors</a>
+          <a href="#specialities">Specialities</a>
+          <a href="#services">Facilities</a>
+          <a href="#appointment">Book Appointment</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Specialities</h4>
+          <a href="#specialities">Cardiology</a>
+          <a href="#specialities">Orthopedics</a>
+          <a href="#specialities">Dermatology</a>
+          <a href="#specialities">Gynecology</a>
+          <a href="#specialities">Pediatrics</a>
+          <a href="#specialities">General Medicine</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 LifeLine Hospital, Mumbai. All rights reserved.</p>
+        <p>Designed for better patient care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== STICKY MOBILE BOOKING BAR ====== -->
+  <div class="mobile-booking-bar" id="mobileBookingBar">
+    <a href="#appointment" class="btn btn-primary">
+      📅 Book Appointment
+    </a>
+    <!-- Placeholder for LiveKit assigned SIP number -->
+    <a href="tel:+918000000000" class="btn btn-outline">
+      📞 Call Hospital / AI
+    </a>
+  </div>
+
+  <!-- ====== EMERGENCY FLOATING BUTTON ====== -->
+  <a href="tel:+918000000000" class="emergency-float" id="emergencyFloat">
+    🚨
+    <span class="tooltip">Call Hospital / AI</span>
+  </a>
+
+  <!-- ====== AI VOICE AGENT FLOATING UI ====== -->
+  <div class="voice-agent-float" id="voiceAgentBtn">
+    <div class="pulse-ring"></div>
+    <button class="voice-btn" title="Call AI Assistant">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+      </svg>
+    </button>
+    <span class="voice-status">Assistant</span>
+  </div>
+
+  <!-- ====== AI VOICE OVERLAY ====== -->
+  <div class="voice-overlay" id="voiceOverlay">
+    <div class="overlay-content">
+      <div class="voice-avatar">
+        <div class="bars" id="voiceBars">
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+      </div>
+      <h3>Lifeline AI Assistant</h3>
+      <p id="voiceStatusText">Press to start conversation...</p>
+      <div class="voice-controls">
+        <button class="btn btn-primary" id="startCallBtn">Start Call</button>
+        <button class="btn btn-outline end-call-btn" id="endCallBtn" style="display:none;">End Call</button>
+      </div>
+      <button class="close-overlay" id="closeOverlay">✕</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
