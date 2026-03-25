@@ -284,16 +284,16 @@ button { cursor: pointer; }
 .nav.active {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: var(--header-height);
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
-  bottom: 0;
+  height: 100vh;
   background: var(--white);
   padding: 24px;
   gap: 8px;
-  z-index: 999;
   animation: slideDown 0.3s ease;
+  border-top: 1px solid rgba(226, 232, 240, 0.5);
 }
 
 @keyframes slideDown {

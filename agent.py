@@ -5,8 +5,8 @@ import logging
 from typing import Annotated
 from dotenv import load_dotenv
 from livekit.agents import JobContext, WorkerOptions, cli, llm
-from livekit.agents.pipeline import VoicePipelineAgent
-from livekit.plugins import sarvam, openai, silero
+from livekit.agents.voice import Agent as VoicePipelineAgent
+from livekit.plugins import sarvam, openai
 
 # Simple logging
 logger = logging.getLogger("lifeline-agent")
@@ -47,8 +47,8 @@ def book_appointment_db(name, phone, doctor_name, date, time):
         return f"Database error: {str(e)}"
 
 # Define the Assistant Tools
-class AssistantTools(llm.FunctionContext):
-    @llm.ai_callable(description="Check available doctors and their specialties")
+class AssistantTools(llm.ToolContext):
+    @llm.function_tool(description="Check available doctors and their specialties")
     def list_doctors(self) -> str:
         doctors = get_doctors_list()
         if not doctors:
@@ -59,14 +59,14 @@ class AssistantTools(llm.FunctionContext):
             info += f"- {d[0]} ({d[1]}) | {d[2]}, {d[3]}\n"
         return info
 
-    @llm.ai_callable(description="Book an appointment for a patient")
+    @llm.function_tool(description="Book an appointment for a patient")
     def book_appointment(
         self,
-        patient_name: Annotated[str, llm.TypeInfo(description="Full name of the patient")],
-        phone: Annotated[str, llm.TypeInfo(description="Contact phone number")],
-        doctor_name: Annotated[str, llm.TypeInfo(description="Name of the doctor as listed in the database")],
-        date: Annotated[str, llm.TypeInfo(description="Date of appointment (YYYY-MM-DD or friendly format)")],
-        time: Annotated[str, llm.TypeInfo(description="Preferred time for the appointment")]
+        patient_name: str,
+        phone: str,
+        doctor_name: str,
+        date: str,
+        time: str
     ) -> str:
         logger.info(f"Booking appointment for {patient_name} with {doctor_name}")
         result = book_appointment_db(patient_name, phone, doctor_name, date, time)
@@ -94,7 +94,6 @@ async def entrypoint(ctx: JobContext):
     # Use OpenAI for the LLM brain (require OPENAI_API_KEY in .env)
     
     agent = VoicePipelineAgent(
-        vad=silero.VAD.load(), # Using Silero VAD for silence detection
         stt=sarvam.STT(api_key=os.getenv("SARVAM_API_KEY")),
         llm=openai.LLM(
             api_key=os.getenv("GROQ_API_KEY") or os.getenv("OPENAI_API_KEY"), 
